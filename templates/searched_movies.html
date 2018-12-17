@@ -1,0 +1,32 @@
+<h1>Movies search results for {{ term.term }}</h1>
+{% extends 'index.html' %}
+
+{% block navigation %}
+ {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+
+<ul>
+{% for sg in movies %}
+<li>
+  <h4>{{ sg.title }}</h4>
+  </br>
+  <img src={{ sg.embedURL }} />
+  <p>{{ sg.plot }}</p>
+</li>
+<br>
+{% endfor %}
+</ul>
+
+{% if not movies %}
+There are no saved movies to show.
+{% endif %}
+
+<div>
+{% for message in get_flashed_messages() %}
+<strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

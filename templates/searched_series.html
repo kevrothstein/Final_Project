@@ -1,0 +1,31 @@
+<h1>Series search results for {{ term.term }}</h1>
+{% extends 'index.html' %}
+
+{% block navigation %}
+ {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+
+<ul>
+{% for sg in series %}
+<li>
+  <h4>{{ sg.title }}</h4>
+  </br>
+  <img src={{ sg.embedURL }} />
+</li>
+<br>
+{% endfor %}
+</ul>
+
+{% if not series %}
+There are no saved series to show.
+{% endif %}
+
+<div>
+{% for message in get_flashed_messages() %}
+<strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

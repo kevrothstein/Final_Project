@@ -1,0 +1,20 @@
+<h1>Previous Series Searches</h1>
+{% extends 'index.html' %}
+
+{% block navigation %}
+    {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+    <ul>
+    {% for t in all_terms %}
+        <li>
+        	<a href="{{ url_for('series_search_results', series_search_term=t.term) }}">{{ t.term }}</a> (Click to see the results from that search)
+<!--         	<form method="POST" action="/delete/{{ t }}">
+            	{{ form.hidden_tag() }}
+            	{{ form.submit() }}
+        	</form> -->
+        </li><br>
+    {% endfor %}
+    </ul>
+{% endblock %}

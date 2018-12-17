@@ -1,0 +1,22 @@
+<h1>{{ collection.name }}</h1>
+{% extends 'index.html' %}
+
+{% block navigation %}
+ {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+
+<form method="GET" action="/update/{{ id }}">
+	{{ form.hidden_tag() }}
+	{{ form.submit() }}
+</form>
+
+{% for sg in movies %}
+      <strong>{{ sg.title }}</strong>
+      </br>
+      <img src={{ sg.embedURL }} />
+    <br><br>
+{% endfor %}
+
+{% endblock %}

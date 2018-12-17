@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block navigation %}
+    {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+    <form action="{{ url_for('search_series') }}" method="GET">
+		{{ form.hidden_tag() }}
+		{{ form.search.label }} {{ form.search() }}
+		{{ form.submit() }}
+	</form>
+{% endblock %}
