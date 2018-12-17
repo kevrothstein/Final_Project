@@ -5,6 +5,7 @@ My application allows users to search movies/tv shows via OMBD API. Users can cr
 **Routes**
 
 / --> index.html
+
 /login --> login.html
 /logout --> index.html
 /register --> register.html
