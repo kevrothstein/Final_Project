@@ -7,19 +7,33 @@ My application allows users to search movies/tv shows via OMBD API. Users can cr
 / --> index.html
 
 /login --> login.html
+
 /logout --> index.html
+
 /register --> register.html
+
 /secret
+
 /search_series —> search_series.html
+
 /series_searched/<series_search_term> —> searched_series.html
+
 /movies_searched/<movie_search_term> —> searched_movies.html
+
 /movies_search_terms —> movie_search_terms.html
+
 /series_search_terms —> series_search_terms.html
+
 /all_movies —> all_movies.html
+
 /create_collection —> create_collection.html
+
 /update/<id> —> update_collection.html
+  
 /collections —> collections.html
+
 /collection/<id_num> —> collection.html
+
 /delete/<movie_term> —> movie_search_terms.html 
 
 
